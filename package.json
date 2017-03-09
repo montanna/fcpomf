@@ -1,0 +1,32 @@
+{
+  "name": "fcpomf",
+  "version": "1.0.0",
+  "description": "Fresno County Peace Officers Memorial Website",
+  "main": "app.js",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "2.4.1",
+    "express": "^4.13.3",
+    "firebase-admin": "^4.1.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta11",
+    "serve-favicon": "^2.3.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montanna/fcpomf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montanna/fcpomf/issues"
+  },
+  "homepage": "https://github.com/montanna/fcpomf"
+}
