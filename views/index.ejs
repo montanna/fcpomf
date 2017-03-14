@@ -2,18 +2,19 @@
 <head>
 <title> Fresno County Peace Officers Memorial </title>
   <link href='https://fonts.googleapis.com/css?family=Bitter|Montserrat' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="../static/lib/loupe/loupe.css" />
             <link rel="stylesheet" href="../static/css/site.css" />
 </head>
 <body>
 <!--home-->
 <div id="section1" class="section">
     <div class="sectionContent">
-        <div class="homeBanner">
+        <div class="homeBanner flexParent">
             <div class="col-sm-9">
                 <h2 class="homeHeader">Fresno County Peace Officers Memorial Foundation</h2>
             </div>
             <div class="col-sm-3 text-center">
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank"><div class="btn btnBlue donateBtn"><h4 class="Montserrat w" style="padding: 0 5px;">DONATE</h4></div></a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank"><div class="btn btnRed donateBtn"><h4 class="Montserrat w" style="padding: 0 5px;">DONATE</h4></div></a>
             </div>
         </div>
         <div class="">
@@ -22,7 +23,7 @@
                 <p>Check the <a class="section6Btn">Events</a> page for more information on upcoming events. </p>
             </div>
         </div>
-        <div class="homeFooter">
+        <div class="homeFooter flexParent">
             <div class="col-sm-9">
                 <h4 class="">DEDICATED TO THOSE OFFICERS WHO PAID THE ULTIMATE PRICE</h4>
                 <div class="col-sm-12">
@@ -78,7 +79,7 @@
     </div>
 </div>
 <!--board-->
-<div id="section3" class="section">
+<div id="section3" class="section flexParent">
     <h2>Fresno County Peace Officers Memorial Foundation Board</h2>
     <div class="col-sm-6">
         <h4>Executive Board Members</h4>
@@ -230,12 +231,22 @@ the best of luck in your future endeavors.
 
 </div>
 
-<!--shop-->
-@*<div id="section7" class="section">
-    <h2>Shop</h2>
-    <div class="col-sm-12 homeNotification">
-        <h3>This page is temporarily under construction.</h3>
-    </div>
-</div>*@
+<!--JS-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+
+<script src="../static/lib/loupe/loupe.js"></script>
+
+<script src="../static/js/BoardViewModel.js"></script>
+
+<script src="../static/js/EventsViewModel.js"></script>
+
+<script src="../static/js/GalleryViewModel.js"></script>
+
+<script src="../static/js/officers.js"></script>
+
+<script src="../static/js/site.js"></script>
+
 
 </body>
