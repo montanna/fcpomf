@@ -2,6 +2,7 @@
 
 var fs             = require('fs');
 var express        = require('express');
+var ejs            = require('ejs'); 
 var path           = require('path');
 var bodyParser     = require('body-parser');
 
@@ -17,8 +18,9 @@ var index = require('./routes/index');
 var app = express();
 
 // VIEW ENGINE //
+
 app.set('views', path.join( __dirname, 'views' ));                       // use ./views as views directory
-app.set('view engine', 'pug');                                           // use pug as our templating engine
+app.set('view engine', 'ejs');                                           // use ejs as our templating engine
 
 // RESOURCES //
 app.use('/static', express.static( __dirname + '/public') );             // serve requests to /static from /public

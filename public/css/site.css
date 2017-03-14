@@ -1,0 +1,517 @@
+/*LESS colors*/
+/*mixins*/
+.Montserrat {
+  font-family: Montserrat, 'Trebuchet MS', Calibri, Arial, sans-serif;
+}
+.Bitter {
+  font-family: Bitter, Cambria, Georgia, Calibri, Arial, sans-serif;
+}
+.sansSerif {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+.w {
+  color: #fff;
+}
+.textShadow {
+  text-shadow: 1px 1px 2px #000;
+}
+.fade {
+  transition: all 0.2s ease;
+}
+.borderLeft {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.borderLeft2 {
+  border-left: 1px solid #fff;
+}
+.borderTop {
+  width: 100%;
+  margin-top: 55px;
+  border-top: 1px solid #272727;
+}
+.smol {
+  font-family: Calibri, Arial;
+  font-size: 14px;
+}
+/*global styling*/
+body {
+  color: #fff;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  background: url(../images/flagBkg.jpg) fixed center center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Bitter, Cambria, Georgia, Calibri, Arial, sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  padding: 10px 30px 10px 10px;
+}
+.eventDate {
+  padding-left: 25px!important;
+}
+p {
+  padding: 5px 30px 5px 10px;
+}
+a:hover {
+  cursor: pointer;
+}
+.btnBlue {
+  background: #054663;
+  transition: all 0.2s ease;
+}
+.btnBlue:hover {
+  background: #0979ac;
+}
+hr {
+  border-color: #ffffff;
+}
+.hrDark {
+  border-color: #111;
+}
+.popover-title,
+.popover-content {
+  color: #000;
+  text-shadow: none;
+}
+.pdf {
+  width: 100%;
+  height: 60vh;
+}
+/*navbar styling*/
+.navbar {
+  background: #000;
+  max-width: 100vw;
+}
+.nav li a {
+  font-family: Montserrat, 'Trebuchet MS', Calibri, Arial, sans-serif;
+  color: #fff;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.nav li a:hover {
+  background: #0979ac;
+  cursor: pointer;
+}
+.active {
+  background: #054663;
+  color: #fff;
+}
+.icon-bar {
+  background: #fff;
+}
+/*section styling*/
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 20px 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+/*section 1 styling*/
+.homeFooter {
+  min-height: 30vh;
+  width: 100vw;
+  margin-left: 0;
+}
+#section1 {
+  overflow-y: hidden;
+}
+#section3,
+#section5,
+#section7 {
+  background: rgba(0, 0, 0, 0.8);
+}
+.homeHeader {
+  padding: 30px;
+  font-size: 2.3em;
+}
+.homeBanner {
+  width: 100vw;
+  height: 50vh;
+  margin-left: -30px;
+  margin-top: -20px;
+  padding: 60px 0 0 0;
+  background: url("../images/mem.jpg") center top fixed no-repeat;
+  background-size: 100% auto;
+}
+.homeNotification {
+  background: #054663;
+  text-align: center;
+  margin-left: -20px;
+  width: 110%;
+}
+.donateBtn {
+  margin-top: 40%;
+}
+/*about page styling*/
+.aboutContainer {
+  margin: 10px;
+  padding: 0 20px 0 20px;
+}
+.objectiveContainer {
+  background-color: #054663;
+  height: 100%;
+  padding: 20px;
+}
+.objectiveContainer > h3 {
+  padding: 0px 30px 10px 30px;
+  text-shadow: none;
+}
+.objectiveContainer > hr {
+  border-color: #0979ac;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+/*board page styling*/
+.memberTitle {
+  display: inline;
+  padding: 0px 10px;
+  font-weight: bold;
+}
+.emailLink {
+  padding: 10px;
+  user-select: none;
+  width: 20px;
+  display: inline;
+}
+.emailLink:hover {
+  cursor: pointer;
+}
+/*timeline styling*/
+.timeline {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.item {
+  flex: 0 0 25%;
+  position: relative;
+  margin: 10px;
+  background: #fff;
+  color: #000!important;
+  transition: all 0.3s ease;
+}
+.item > h4 {
+  color: #000!important;
+  text-shadow: none;
+}
+.item:hover {
+  cursor: pointer;
+  background: #0e0e0e;
+}
+.item:hover h4 {
+  color: #fff!important;
+}
+.officerImg {
+  position: absolute;
+  width: 40%;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70%;
+  background: center center no-repeat;
+  background-size: cover;
+}
+/*gallery styling*/
+#memorialImg {
+  width: 100vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*modal pop-up styling*/
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50px;
+  padding-top: 30px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2;
+  overflow: auto;
+}
+.modal2 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  padding-top: 30px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2;
+  overflow: auto;
+  width: 70vw;
+  height: 50vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0e0e0e;
+  box-shadow: 5px 5px 20px #000;
+}
+.modalInner {
+  margin-top: 100px;
+}
+.modalInner2 {
+  padding: 10px;
+  display: block;
+}
+.modalClose {
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  text-align: center;
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+.modalClose > span {
+  font-size: 17px;
+}
+.modalClose2 {
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  text-align: center;
+  top: 5px;
+  right: 30px;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+}
+.modalClose2 > span {
+  font-size: 17px;
+}
+.albumDropdown {
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+#galleryAlbums {
+  width: 80vw;
+  margin: 0 auto;
+  min-height: 300px;
+}
+.galleryImg {
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: #000 0px 0px 300px inset;
+  background-blend-mode: luminosity;
+}
+.galleryImg:hover {
+  box-shadow: none;
+}
+.galleryImg > h4 {
+  text-shadow: 0px 0px 5px #000 !important;
+  cursor: pointer;
+}
+.galleryImgAlbum {
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: #000 0px 0px 300px inset;
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  height: 150px;
+  background-blend-mode: luminosity;
+  background-size: cover!important;
+}
+.galleryImgAlbum:hover {
+  box-shadow: none;
+}
+.galleryImgAlbum > h4 {
+  text-shadow: 0px 0px 5px #000 !important;
+  cursor: pointer;
+}
+.galleryImgAlbum > h4 {
+  text-shadow: 1px 1px 2px #000  !important;
+  cursor: pointer;
+}
+.galleryImgAlbum:hover {
+  box-shadow: none;
+}
+.galleryImgSmall {
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: #000 0px 0px 300px inset;
+  background-blend-mode: luminosity;
+  width: 100px;
+  height: 100px;
+}
+.galleryImgSmall:hover {
+  box-shadow: none;
+}
+.galleryImgSmall > h4 {
+  text-shadow: 0px 0px 5px #000 !important;
+  cursor: pointer;
+}
+.thumbnails {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 220px;
+  overflow: auto;
+}
+/*backgrounds for each album - the class name is the year and an acronym of the event name*/
+.a2010FCPOM {
+  background: url(/images/2010FCPOM/1.jpg), #000000;
+}
+.a2010MCC {
+  background: url(/images/2010MCC/2.jpg), #000000;
+}
+.a2010NLEM {
+  background: url(/images/2010NLEM/1.jpg), #000000;
+}
+.a2010PUSHF {
+  background: url(/images/2010PUSHF/1.jpg), #000000;
+}
+.a2013FCPOM {
+  background: url(/images/2013FCPOM/1.jpg), #000000;
+}
+.a2014FCPOM {
+  background: url(/images/2014FCPOM/1.jpg), #000000;
+}
+.aMaldonadoHighwaySign {
+  background: url(/images/MaldonadoHighwaySign/6.jpg), #000000;
+}
+.aMaldonadoPark {
+  background: url(/images/MaldonadoHighwaySign/5.jpg), #000000;
+}
+.imgActive {
+  -webkit-filter: brightness(1);
+}
+.galleryImgMain {
+  height: 40vh;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #0C0C0C;
+  cursor: pointer;
+}
+.galleryNav {
+  position: absolute;
+  width: 80%;
+  left: 0;
+  right: 0;
+  top: 30%;
+  margin: auto;
+  font-size: 36px;
+}
+.galleryNav:hover {
+  cursor: pointer;
+}
+/*events page*/
+.calendarBtn {
+  margin-left: 20px;
+}
+/*media queries*/
+@media (max-width: 768px) {
+  /*for most mobile devices including tablets and large phones*/
+  .section {
+    padding: 0px;
+    margin-top: 20px;
+  }
+  #section1 {
+    background-size: cover;
+  }
+  .homeHeader,
+  .homeBanner {
+    padding: 10px;
+    background-size: auto 100%;
+    background-position: left top;
+    height: 65vh;
+  }
+  .homeBanner {
+    margin-left: 0px;
+  }
+  .homeHeader {
+    font-size: 36px;
+    margin-top: 15%;
+  }
+  .donateBtn {
+    margin-top: -300px;
+  }
+  .memLogo {
+    display: none;
+  }
+  .objectiveContainer {
+    padding: 20px 40px 20px 20px;
+  }
+  .showPC {
+    display: none;
+  }
+  .galleryImgMain,
+  .galleryNav {
+    display: none;
+  }
+  .galleryImgSmall {
+    box-shadow: none;
+  }
+  .modal2 {
+    width: 100vw;
+    height: 85vh;
+  }
+  .modalInner {
+    margin-top: 0px;
+  }
+  .modalClose {
+    position: fixed;
+    top: 53px;
+    right: 30px;
+  }
+  .modalClose > span {
+    font-size: 16px;
+  }
+  .thumbnails {
+    height: 100%;
+  }
+  .item {
+    flex: 0 0 90%;
+  }
+}
+@media (max-width: 480px) {
+  /*for phones with smaller screens*/
+  h1 {
+    font-size: 32px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+}
