@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Fresno County Peace Officers Memorial </title>
   <link href='https://fonts.googleapis.com/css?family=Bitter|Montserrat|Material+Icons' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="../static/lib/animate.css" />
             <link rel="stylesheet" href="../static/css/site.css" />
 </head>
 <body>
@@ -262,6 +263,28 @@ the best of luck in your future endeavors.
 
 </div>
 
+<div class="loginModal">
+<div class="box flexParent">
+<div class="loginBox">
+    <div class="col-sm-12"><h1 style="color: #000; text-shadow: none">Log in</h1></div>
+    <div class="col-sm-12">
+    <div class="flexParent">
+        <div class="col-sm-3"><label for="email">Email</label></div>
+        <div class="col-sm-6"><input type="email" data-bind="value: $root.user"/></div>
+    </div>
+    </div>
+    <div class="col-sm-12">
+    <div class="flexParent">
+        <div class="col-sm-3"><label for="password">Password</label></div>
+        <div class="col-sm-6"><input type="password" data-bind="value: $root.pass"/></div>
+    </div>
+    </div>
+    <div class="submitBtn btn" data-bind="click: function(){$root.submit();}">Submit</div>
+    </div>
+    <div class="close">x</div>
+    <img class="check" src="../static/images/check-icon.png"/>
+</div>
+</div>
 
 
 <!--JS-->
@@ -281,7 +304,6 @@ the best of luck in your future endeavors.
   };
   firebase.initializeApp(config);
 </script>
-
 
 <script src="../static/js/BoardViewModel.js"></script>
 

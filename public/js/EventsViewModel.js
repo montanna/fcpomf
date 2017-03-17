@@ -1,4 +1,7 @@
-﻿EventsViewModel = function() {
+﻿var database = firebase.database();
+var eventsList = firebase.database().ref('events');
+EventsViewModel = function() {
+
     var self = this;
     self.events = [];
 
@@ -45,5 +48,9 @@
             eventLocation: "",
             eventLink: ""
         });
+    }
+
+    for (var i = 0; i < self.events.length; i++) {
+        eventsList.push(self.events[i]);
     }
 }

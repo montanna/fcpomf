@@ -14,8 +14,13 @@
 .btn {
     text-align: center;
     padding: 5px;
+    margin: 5px;
     transition: all 0.2s ease;
     border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .col-sm-12 {
@@ -434,6 +439,50 @@ ul.nav {
     overflow: auto;
 }
 
+.loginModal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2;
+    overflow: auto;
+}
+
+.loginModal > .box {
+    height: 36vh;
+    width: 36vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    background: #fff;
+    color: #111!important;
+    text-align: center;
+}
+
+.submitBtn {
+    background: #0979ac;
+    color: #fff;
+    width: 33%;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.check {
+    height: 100%;
+    display: none;
+}
+
+.box > form > label {
+    width: 100px;
+}
+
 .modal2 {
     display: none;
     top: 50px;
@@ -458,6 +507,16 @@ ul.nav {
 
 .modalInner2 {
     padding: 20px;
+}
+
+.close {
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
 }
 
 .modalClose {

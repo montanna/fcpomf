@@ -1,7 +1,25 @@
 ﻿// Write your Javascript code.
-LoginVM = function({
+var database = firebase.database();
+
+LoginVM = function() {
     var self = this;
-});
+    self.user = ko.observable("");
+    self.pass = ko.observable("");
+
+    self.submit = function() {
+        firebase.auth().signInWithEmailAndPassword(self.user(), self.pass()).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+
+        });
+        $(".loginBox").addClass("animated flipOutX");
+        $(".check").addClass("animated flipInX");
+        $(".loginBox").hide();
+        $(".check").show();
+    }
+
+};
 
 function initControls() {
     /*initialize loupe (js magnifier)*/
@@ -84,6 +102,10 @@ function initControls() {
         $(".navbar-header").click();
     });
 
+    $(".loginBtn").on("click", function() {
+        $(".loginModal").show();
+    });
+
     $(".emailLink").on("click", function() {
         $(".popover").hide();
         $(".popover").remove();
@@ -92,6 +114,10 @@ function initControls() {
     $(".goto6").on("click", function() {
         $(".section6Btn").click();
     });
+
+    $(".close").on("click", function() {
+        $(".loginModal").hide();
+    })
 
 
 
@@ -130,6 +156,9 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function() {
+    var loginVM = new LoginVM;
+    ko.applyBindings(loginVM, $(".loginModal")[0]);
+
     var boardVM = new BoardViewModel;
     ko.applyBindings(boardVM, $("#section3")[0]);
 
