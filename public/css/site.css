@@ -253,12 +253,14 @@ ul.nav {
 
 #section3 {
     background: rgba(6, 29, 42, 0.4);
+    padding: 20px;
 }
 
 #section4 {
     background: rgba(0, 0, 0, 0.7) url(../images/memlg.jpg);
     background-blend-mode: multiply;
     background-size: cover;
+    padding: 20px;
 }
 
 #section5 {
@@ -300,7 +302,6 @@ ul.nav {
 .homeNotification {
     background: #054663;
     text-align: center;
-    width: 110%;
     margin-top: -25px;
 }
 
@@ -668,6 +669,13 @@ ul.nav {
 
 /*media queries*/
 
+@media (min-width: 768px) {
+    /*for desktop*/
+    body {
+        font-size: small;
+    }
+}
+
 @media (max-width: 768px) {
     /*for most mobile devices including tablets and large phones*/
     .collapse {
@@ -700,6 +708,7 @@ ul.nav {
     }
     .homeBanner {
         margin-left: 0px;
+        height: 80vh;
     }
     .homeHeader {
         font-size: 36px;
@@ -707,8 +716,9 @@ ul.nav {
     }
     .donateBtn {
         margin-top: 0px;
-        top: 50%;
-        transform: translateY(-75%);
+        position: unset;
+        top: unset;
+        transform: none;
         width: 200px;
         height: 70px;
         border-radius: 6px;
