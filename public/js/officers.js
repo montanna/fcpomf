@@ -9,7 +9,7 @@
         self.openPopUp = function() {
             $(".modal2").empty();
             $(".modal2").append(
-                '<div class="modalInner2"><div class="col-sm-12"><h3>' + self.selectedOfficer().officerName + '</h3><div class="modalClose2"><span>x</span></div></div><div class="col-sm-3"><img src="' + self.selectedOfficer().officerImg + '"/></div><div class="col-sm-9">' + self.selectedOfficer().description + '</div></div>'
+                '<h1>' + self.selectedOfficer().officerName + '</h1><div class="modalInner2 flexParent"><div class="modalClose2"><span>x</span></div><div class="col-sm-3 centerText"><img src="' + self.selectedOfficer().officerImg + '"/></div><div class="col-sm-9">' + self.selectedOfficer().description + '</div></div>'
             );
             $(".modal2").show();
             /*click handlers*/

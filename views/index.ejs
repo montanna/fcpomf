@@ -43,34 +43,32 @@
         </div>
         <div class="">
             <div class="col-sm-12  homeNotification">
-                <h4>The 2017 Fresno County Peace Officers Memorial takes place on 5/5/2017 at Courthouse Park.</h4>
+                <h2>The 2017 Fresno County Peace Officers Memorial takes place on 5/5/2017 at Courthouse Park.</h4>
                 <p>Check the <a class="section6Btn">Events</a> page for more information on upcoming events. </p>
             </div>
         </div>
-        <div class="homeFooter flexParent">
-            <div class="col-sm-9">
+        <div class="homeFooter centerText">
                 <h2 class="">DEDICATED TO THOSE OFFICERS WHO PAID THE ULTIMATE PRICE</h4>
-                <div class="col-sm-12">
                     <p>
-                        The Fresno County Peace Officers Memorial Foundation honors the officers of Fresno County who have fallen in the line of duty.  As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall. <br />
+                        The Fresno County Peace Officers Memorial Foundation honors the officers of Fresno County who have fallen in the line of duty.<br/>  As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall. <br />
                         Tax deductible donations can be made to the Fresno County Peace Officers Memorial Foundation via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">PayPal</a> or P.O. Box 4290 Fresno, California 93744
                     </p>
-                </div>
-            </div>
+                    <!--
             <div class="col-sm-3 centerText memLogo">
                 <div style="height: 200px; position: relative;">
                     <div class="borderLeft"><img src="../static/images/memorialCenter.png" style="width: 70%;" /></div>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </div>
-
 <!--about-->
 <div id="section2" class="section">
     <div class="section2Inner flexParent">
-        <div class="col-sm-9">
-        <h2>About the Fresno County Peace Officers Memorial Foundation</h2>
+        <div class="col-sm-9 objectiveContainer">
+        <h1>About the Fresno County Peace Officers Memorial Foundation</h2>
+        <hr/>
             <p>
                 Peace Officers Memorial Day is an observance in the United States that pays tribute to local, state, and federal law enforcement officers and takes place on May 15th. The holiday was created on October 1, 1961, when Congress asked the president to designate May 15th as a day to honor law enforcement officers.  John F. Kennedy signed the bill into law on October 1, 1962.  Much of the holiday centers around the National Law Enforcement Officers Memorial Wall in Washington, D.C., which features the names of the more than 17,000 law enforcement officers who have been killed in the line of duty.
             </p>
@@ -106,10 +104,12 @@
 </div>
 <!--board-->
 <div id="section3" class="section ">
-    <h2>Fresno County Peace Officers Memorial Foundation Board</h2>
+    <h1>Fresno County Peace Officers Memorial Foundation Board</h2>
 <div class="flexParent">
-    <div class="col-sm-6">
-        <h4>Executive Board Members</h4>
+    <div class="col-sm-6 objectiveContainer">
+        <h3>Executive Board Members
+        <hr/>
+        </h3>
         <div data-bind="foreach: $root.boardMembers">
             <!--this section is only for the Executive Board Members-->
             <div class="col-sm-12">
@@ -122,8 +122,10 @@
         </div>
     </div>
     <!--board of directors-->
-    <div class="col-sm-6">
-        <h4>Board of Directors</h4>
+    <div class="col-sm-6 objectiveContainer">
+        <h3>Board of Directors
+        <hr/>
+        </h3>
         <div data-bind="foreach: $root.boardDirectors">
             <div class="col-sm-12" style="padding-bottom:10px;">
                 <div data-toggle="popover" title="Contact" data-content="" data-html="true" data-bind="attr:{'data-content': memberEmailHTML + '<br/>Click the envelope again to hide this box.'}" data-placement="top" class="emailLink"><i class="material-icons">email</i> </div>
@@ -139,7 +141,8 @@
 
 <!--fallen-->
 <div id="section4" class="section">
-    <h2>Fresno County's Fallen Officers</h2>
+<div style="margin: 20px;">
+    <h1>Fresno County's Fallen Officers</h1>
     <p>
         The Fresno County Peace Officers Memorial Foundation, Inc. is organized and its assets are to be used to continue recognizing and honoring fallen peace officers who have died in the line of duty while serving in Fresno County.
     </p>
@@ -154,8 +157,9 @@
             </div>
     </div>
     <div class="modal2">
-        <div class="modalInner">
+        <div class="modalInner ">
         </div>
+    </div>
     </div>
 </div>
 
@@ -168,54 +172,52 @@
             <span class="showPC">Choose a photo album:</span>
             <select class="albumDropdown showPC" data-bind="options: $root.albums(), optionsText: 'albumTitle', value: selectedAlbum, optionsCaption: 'Choose an album...'"></select>
         </div>
-        <div class="col-sm-2">
             <div class="modalClose">
                 <span>Back to gallery</span>
             </div>
-        </div>
+        <!--
         <div class="galleryNav">
             <i class="pull-left galleryLeft material-icons">chevron-left</i>
             <i class="pull-right galleryRight material-icons">chevron-right</i>
         </div>
+        -->
         <div class="modalInner"></div>
     </div>
-    <h2>Photo Gallery</h2>
+    <h1>Photo Gallery</h2>
     <h4>Click on an album below to view photos from that event.</h4>
-    <div id="galleryAlbums" data-bind="foreach: $root.albums()">
-        <div class="col-sm-2" style="padding: 0px;">
+    <div id="galleryAlbums" class="flexParent" data-bind="foreach: $root.albums()">
             <div class="galleryImgAlbum" data-bind="css: 'a'+ albumID, click: function(data,event){ $root.selectAlbum(data,event); $root.showModal(data,event)}">
                 <h4 data-bind="text: albumTitle"></h4>
             </div>
-        </div>
     </div>
     <hr style="opacity: 0"/>
     <hr style="opacity: 0"/>
-    <h4>The Fresno County Peace Officers Memorial in Courthouse Park <br/> <br/>
-    <span class="smol">
-        <span class="showPC">Hover over the image for a closer look. </span>Click the image below to open a full-size version in a new tab or window.
-    </span>
-    </h4>
+    <h1>The Fresno County Peace Officers Memorial in Courthouse Park <br/> <br/>
+    <span class="smol"> Click the image below to open a full-size version in a new tab or window. </span>
+    </h1>
+    <div id="memorialGallery" style="position: relative;"><a href="../static/images/memlg.jpg" target="_blank" ><img  id="memorialImg" src="../static/images/mem_only_sm.jpg" /></a></div>
     <p>As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall.</p>
-    <div id="memorialGallery" style="position: relative;"><a href="~/images/mem_only.jpg" target="_blank" ><img  id="memorialImg" src="../static/images/mem_only_sm.jpg" /></a></div>
    
 </div>
 
 <!--events-->
 <div id="section6" class="section">
+<h1>Events</h1>
+<div class="flexParent">
     <div class="col-sm-6">
     <h2>Upcoming Events</h2>
-        <div class="eventTable" data-bind="foreach: $root.events">
+        <div class="eventTable flexParent" data-bind="foreach: $root.events">
             <div class="col-sm-12">
                 <h4 data-bind="text: eventTitle"></h4>
             </div>
-                <div class="col-sm-2 eventDate" data-bind="text: eventDate"></div>
+                <div class="col-sm-3 eventDate" data-bind="text: eventDate"></div>
                 <div class="col-sm-3" data-bind="text: eventTime"></div>
-                <div class="col-sm-7" data-bind="text: eventLocation"></div>
-            <div class="col-sm-12">
-            <a class="w btn btnBlue calendarBtn" data-bind="attr: {href: eventLink},  visible: eventDate.length > 0" target="_blank" style="margin-top:20px;">Add to Google Calendar <span class="glyphicon glyphicon-calendar" style="padding-left:10px;"></span></a>
+                <div class="col-sm-6" data-bind="text: eventLocation"></div>
+            <div class="col-sm-12" style="margin-top:20px">
+            <a class="w btn btnBlue calendarBtn" data-bind="attr: {href: eventLink},  visible: eventDate.length > 0" target="_blank" style="padding: 15px;">Add to Google Calendar <i class="material-icons">today</i></a>
             </div>
             <div class="borderTop col-sm-12">
-
+                <hr style="border-color: #054663;"/>
             </div>
         </div>
     </div>
@@ -249,12 +251,12 @@ the best of luck in your future endeavors.
 </p>
             <div class="borderTop"></div>
         <h4>2016 Peace Officers Memorial Week</h4>
-        <p>Click <a href="/images/Proclamation.pdf">here</a> to download the 2016 Peace Officers Memorial Week Proclamation.</p>
-        <object class="pdf" data="~/images/Proclamation.pdf" type="application/pdf" width="300" height="200">
-            This file cannot be displayed in your browser. Click <a href="/images/Proclamation.pdf">here</a> to download it as a .PDF.
+        <p>Click <a href="../static/images/Proclamation.pdf">here</a> to download the 2016 Peace Officers Memorial Week Proclamation.</p>
+        <object class="pdf" data="../static/images/Proclamation.pdf" type="application/pdf" width="300" height="200">
+            This file cannot be displayed in your browser. Click <a href="../static/images/Proclamation.pdf">here</a> to download it as a .PDF.
         </object>
     </div>
-
+</div>
 
 
 </div>
@@ -264,7 +266,6 @@ the best of luck in your future endeavors.
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 
-<script src="../static/lib/loupe/loupe.js"></script>
 
 <script src="../static/js/BoardViewModel.js"></script>
 

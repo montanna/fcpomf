@@ -73,10 +73,10 @@
         $(".galleryImgSmall").on("click", function() {
 
             self.imgIndex = this.id;
-            self.imgUrl = "../static/images/" + self.selectedAlbum().albumID + "/" + self.imgIndex + ".jpg";
+            self.imgUrl = "/static/images/" + self.selectedAlbum().albumID + "/" + self.imgIndex + ".jpg";
 
             if ($(window).width() < 768) {
-                var domain = "http://localhost:52874"; // TESTING ONLY
+                var domain = "http://localhost:4000"; // TESTING ONLY
                 //TODO: before publishing, uncomment this line:
                 domain = "http://fresnocountypeaceofficersmemorial.org";
                 var url = domain + self.imgUrl;
@@ -89,8 +89,8 @@
         });
 
         $(".galleryImgMain").on("click", function() {
-            self.imgUrl = "../static/images/" + self.selectedAlbum().albumID + "/" + self.imgIndex + ".jpg"
-            var domain = "http://localhost:52874"; // TESTING ONLY
+            self.imgUrl = "/static/images/" + self.selectedAlbum().albumID + "/" + self.imgIndex + ".jpg"
+            var domain = "http://localhost:4000"; // TESTING ONLY
             //TODO: before publishing, uncomment this line:
             domain = "http://fresnocountypeaceofficersmemorial.org";
             var url = domain + self.imgUrl;

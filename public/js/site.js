@@ -2,7 +2,7 @@
 
 function initControls() {
     /*initialize loupe (js magnifier)*/
-    new Loupe(document.getElementById('memorialImg'));
+    //new Loupe(document.getElementById('memorialImg'));
     $(".navbar-header").on("click", function() {
         if ($(".navbar-collapse").hasClass("collapse")) {
             $(".navbar-collapse").removeClass("collapse");
