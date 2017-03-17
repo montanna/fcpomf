@@ -59,7 +59,7 @@
         self.imgIndex = 1;
         self.imgUrl = "../static/images/" + self.selectedAlbum().albumID + "/" + self.imgIndex + ".jpg";
         /*add main gallery image and title to the modal*/
-        $(".modalTitle").append('<h3 style="margin-left:30px;">' + self.selectedAlbum().albumTitle + '</h3>');
+        $(".modalTitle").append('<h3>' + self.selectedAlbum().albumTitle + '</h3>');
         self.modal.append('<div class="galleryImgMain"></div><div class="thumbnails"></div>');
         $(".galleryImgMain").attr("style", "background-image: url(" + self.imgUrl + ")");
         /*loop through all items in the album and add them as thumbnails*/
