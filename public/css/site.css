@@ -669,13 +669,6 @@ ul.nav {
 
 /*media queries*/
 
-@media (min-width: 768px) {
-    /*for desktop*/
-    body {
-        font-size: small;
-    }
-}
-
 @media (max-width: 768px) {
     /*for most mobile devices including tablets and large phones*/
     .collapse {

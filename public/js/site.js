@@ -1,4 +1,7 @@
 ﻿// Write your Javascript code.
+LoginVM = function({
+    var self = this;
+});
 
 function initControls() {
     /*initialize loupe (js magnifier)*/
