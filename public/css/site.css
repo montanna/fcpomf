@@ -163,7 +163,7 @@ hr {
 }
 
 .menuIcon {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
 }
@@ -685,15 +685,10 @@ ul.nav {
     .flexParent {
         flex-direction: column;
     }
-    .col-sm-3,
-    .col-sm-6,
-    .col-sm-9,
-    .col-sm-12 {
-        width: 100%;
-    }
     .section {
         padding: 0px;
         margin-top: 20px;
+        width: unset;
     }
     #section1 {
         background-size: cover;
@@ -712,6 +707,14 @@ ul.nav {
     }
     .donateBtn {
         margin-top: 0px;
+        top: 50%;
+        transform: translateY(-75%);
+        width: 200px;
+        height: 70px;
+        border-radius: 6px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     .memLogo {
         display: none;
