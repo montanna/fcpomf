@@ -77,8 +77,9 @@ function initControls() {
         }, 0);
         $(".active").removeClass("active");
         $(".section7Btn").addClass("active");
-        $(".modal").hide();$(".navbar-header").click();
-});
+        $(".modal").hide();
+        $(".navbar-header").click();
+    });
 
     $(".emailLink").on("click", function() {
         $(".popover").hide();

@@ -3,7 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Fresno County Peace Officers Memorial </title>
   <link href='https://fonts.googleapis.com/css?family=Bitter|Montserrat|Material+Icons' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" href="../static/lib/loupe/loupe.css" />
             <link rel="stylesheet" href="../static/css/site.css" />
 </head>
 <body>
@@ -269,6 +268,19 @@ the best of luck in your future endeavors.
 <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDXUt5whL27dkWjjfqLqX7BD0xgw1EJd8I",
+    authDomain: "fcpomf-16753.firebaseapp.com",
+    databaseURL: "https://fcpomf-16753.firebaseio.com",
+    storageBucket: "fcpomf-16753.appspot.com",
+    messagingSenderId: "60804743142"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
 <script src="../static/js/BoardViewModel.js"></script>
