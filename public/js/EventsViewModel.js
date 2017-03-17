@@ -49,8 +49,9 @@ EventsViewModel = function() {
             eventLink: ""
         });
     }
-
-    for (var i = 0; i < self.events.length; i++) {
-        eventsList.push(self.events[i]);
-    }
+    /*
+        for (var i = 0; i < self.events.length; i++) {
+            eventsList.push(self.events[i]);
+        }
+        */
 }
