@@ -3,7 +3,7 @@ var eventsList = firebase.database().ref('events');
 EventsViewModel = function() {
 
     var self = this;
-    self.events = [];
+    self.events = ko.observableArray([]);
 
     self.events = [{
             eventTitle: "2017 Fresno County Peace Officer's Memorial",
