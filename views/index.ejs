@@ -1,319 +1,341 @@
 ﻿<!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Fresno County Peace Officers Memorial </title>
-  <link href='https://fonts.googleapis.com/css?family=Bitter|Montserrat|Material+Icons' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" href="../static/lib/animate.css" />
-            <link rel="stylesheet" href="../static/css/site.css" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   // ie supports
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> Fresno County Peace Officers Memorial </title>
+   <link href='https://fonts.googleapis.com/css?family=Bitter|Montserrat|Material+Icons' rel='stylesheet' type='text/css'>
+   <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="../static/lib/animate.css" />
+   <link rel="stylesheet" href="../static/css/site.css" />
 </head>
 <body>
-<!--nav-->
- <div class="navbar navbar-fixed-top">
-            <div class="container">
-                <!--mobile header-->
-                <div class="navbar-header">
-                    <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <i class="material-icons menuIcon">menu</i>
-                    </div>
-                </div>
-                <!--desktop header-->
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="section1Btn active"><a>Home</a></li>
-                        <li class="section2Btn"><a>About</a></li>
-                        <li class="section3Btn"><a>Board</a></li>
-                        <li class="section4Btn"><a>List of Fallen</a></li>
-                        <li class="section5Btn"><a>Gallery</a></li>
-                        <li class="section6Btn"><a>Events</a></li>
-                        <li class="section7Btn" ><a href="https://squareup.com/store/fresno-county-peace-officers-memorial-foundation-inc/" target="_blank">Shop</a></li>
-                        <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">Donate</a></li>
-                        <li class="loginBtn"><a>Log In</a></li>
-                    </ul>
-                </div>
+   <!--nav-->
+   <div class="navbar navbar-fixed-top">
+      <div class="container">
+         <!--mobile header-->
+         <div class="navbar-header">
+            <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <i class="material-icons menuIcon">menu</i>
             </div>
-        </div>
-<!--home-->
-<div id="section1" class="section">
-    <div class="sectionContent">
-        <div class="homeBanner flexParent">
+         </div>
+         <!--desktop header-->
+         <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+               <li class="section1Btn active"><a>Home</a></li>
+               <li class="section2Btn"><a>About</a></li>
+               <li class="section3Btn"><a>Board</a></li>
+               <li class="section4Btn"><a>List of Fallen</a></li>
+               <li class="section5Btn"><a>Gallery</a></li>
+               <li class="section6Btn"><a>Events</a></li>
+               <li class="section7Btn" ><a href="https://squareup.com/store/fresno-county-peace-officers-memorial-foundation-inc/" target="_blank">Shop</a></li>
+               <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">Donate</a></li>
+               <li class="loginBtn"><a>Log In</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="editBanner">
+      <p>EDIT MODE - click green text boxes to edit their contents</p>
+   </div>
+   <!--home-->
+   <div id="section1" class="section">
+      <div class="sectionContent">
+         <div class="homeBanner flexParent">
             <div class="col-sm-9">
-                <h2 class="homeHeader">Fresno County Peace Officers Memorial Foundation</h2>
+               <h2 class="homeHeader">Fresno County Peace Officers Memorial Foundation</h2>
             </div>
             <div class="col-sm-3 text-center">
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank"><div class="btn btnRed donateBtn"><h4 class="Montserrat w" style="padding: 0 5px;">DONATE</h4></div></a>
+               <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">
+                  <div class="btn btnRed donateBtn">
+                     <h4 class="Montserrat w" style="padding: 0 5px;">DONATE</h4>
+                  </div>
+               </a>
             </div>
-        </div>
-        <div class="">
+         </div>
+         <div class="">
             <div class="col-sm-12  homeNotification">
-                <h2 id="homeNotificationH"data-bind="value: $root.homeNotification()">The 2017 Fresno County Peace Officers Memorial takes place on 5/5/2017 at Courthouse Park.</h4>
-                <p>Check the <a class="section6Btn">Events</a> page for more information on upcoming events. </p>
+               <h2 id="homeNotificationH" class="editable" data-bind="html: homeNotification"></h2>
+               <i class="material-icons editBtn editBtnHomeNotification">edit</i>
+               <p>Check the <a class="section6Btn">Events</a> page for more information on upcoming events. </p>
             </div>
-        </div>
-        <div class="homeFooter centerText">
-                <h2 class="">DEDICATED TO THOSE OFFICERS WHO PAID THE ULTIMATE PRICE</h4>
-                    <p>
-                        The Fresno County Peace Officers Memorial Foundation honors the officers of Fresno County who have fallen in the line of duty.<br/>  As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall. <br />
-                        Tax deductible donations can be made to the Fresno County Peace Officers Memorial Foundation via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">PayPal</a> or P.O. Box 4290 Fresno, California 93744
-                    </p>
-                    <!--
-            <div class="col-sm-3 centerText memLogo">
-                <div style="height: 200px; position: relative;">
-                    <div class="borderLeft"><img src="../static/images/memorialCenter.png" style="width: 70%;" /></div>
-                </div>
+         </div>
+         <div class="homeFooter centerText">
+            <h2 class="">
+               DEDICATED TO THOSE OFFICERS WHO PAID THE ULTIMATE PRICE</h4>
+               <p>
+                  The Fresno County Peace Officers Memorial Foundation honors the officers of Fresno County who have fallen in the line of duty.<br/>  As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall. <br />
+                  Tax deductible donations can be made to the Fresno County Peace Officers Memorial Foundation via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">PayPal</a> or P.O. Box 4290 Fresno, California 93744
+               </p>
+               <!--
+                  <div class="col-sm-3 centerText memLogo">
+                      <div style="height: 200px; position: relative;">
+                          <div class="borderLeft"><img src="../static/images/memorialCenter.png" style="width: 70%;" /></div>
+                      </div>
+                  </div>
+                  -->
+         </div>
+      </div>
+   </div>
+   <!--about-->
+   <div id="section2" class="section">
+   <div class="section2Inner flexParent">
+   <div class="col-sm-9 objectiveContainer">
+      <h1>About the Fresno County Peace Officers Memorial Foundation</h1>
+      <hr/>
+      <i class="material-icons editBtn editBtnAboutUs">edit</i>
+      <div data-bind="html: aboutUs" id="aboutUs">
+         
+         
+      </div>
+      <!--
+         <p> Peace Officers Memorial Day is an observance in the United States that pays tribute to local, state, and federal law enforcement officers and takes place on May 15th. The holiday was created on October 1, 1961, when Congress asked the president to designate May 15th as a day to honor law enforcement officers.  John F. Kennedy signed the bill into law on October 1, 1962.  Much of the holiday centers around the National Law Enforcement Officers Memorial Wall in Washington, D.C., which features the names of the more than 17,000 law enforcement officers who have been killed in the line of duty. </p>
+         <p> In 1997, planning began for the Fresno County Peace Officers Memorial Foundation (FCPOMF) to honor those City, County, State, and Federal Peace Officers who gave their lives in the performance of their duties. Larry Bertao, who was instrumental in the conception and construction of the FCPOMF, held the position as the first President of the FCPOMF from 1998 to 2003.  James Olson became the FCPOMF President in 2003 and has held that honor to this day. </p>
+         <p> The Foundation was instrumental in the construction of the Fresno County Peace Officers Memorial, which broke ground on May 12, 1998, in the Fresno County Courthouse Park.  On May 2007, an addition to the Memorial was completed and includes space for 40 additional names on each side. </p>
+         <p> As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall, prominently displayed in the Fresno's County Courthouse Park. </p>
+         <p> This website is dedicated to those law enforcement officers who paid the ultimate price. </p>
+      -->
+      <p>Tax deductible donations can be made to the Fresno County Peace Officers Memorial Foundation via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">PayPal</a> or P.O. Box 4290 Fresno, California 93744 </p>
+   </div>
+   <div class="col-sm-3 ">
+   <div class="objectiveContainer">
+   <h3>OUR OBJECTIVES & PURPOSES</h3>
+   <hr />
+   <p>
+   The Fresno County Peace Officers Memorial Foundation, Inc. is organized and its assets are to be used to continue recognizing and honoring fallen peace officers who have died in the line of duty while serving in Fresno County.
+   </p>
+   <p>
+   The assets of the Fresno County Peace Officers Memorial Foundation, Inc. will be utilized to construct, maintain, and enhance the Fresno County Peace Officers Memorial in Fresno County Courthouse Park and to administer the annual ceremony conducted during the National Police Week.
+   The Board of Directors may provide for additional assistance, as deemed appropriate, for the families of those officers who are honored.
+   </p>
+   </div>
+   </div>
+   </div>
+   </div>
+   <!--board-->
+   <div id="section3" class="section ">
+      <h1>
+      Fresno County Peace Officers Memorial Foundation Board</h2>
+      <div class="flexParent">
+         <div class="col-sm-6 objectiveContainer">
+            <h3>
+               Executive Board Members
+               <hr/>
+            </h3>
+            <div data-bind="foreach: $root.boardMembers">
+               <!--this section is only for the Executive Board Members-->
+               <div class="col-sm-12">
+                  <div data-toggle="popover" title="Contact" data-content="" data-html="true" data-bind="attr:{'data-content': memberEmailHTML}" data-placement="top" class="emailLink"><i class="material-icons">email</i> </div>
+                  <p class="memberTitle"><span data-bind="text: memberTitle"></span> | <span data-bind="text: memberName"></span> </p>
+               </div>
+               <div class="col-sm-12">
+                  <p data-bind="html: memberPosition"></p>
+               </div>
             </div>
-            -->
-        </div>
-    </div>
-</div>
-<!--about-->
-<div id="section2" class="section">
-    <div class="section2Inner flexParent">
-        <div class="col-sm-9 objectiveContainer">
-        <h1>About the Fresno County Peace Officers Memorial Foundation</h2>
-        <hr/>
-            <p>
-                Peace Officers Memorial Day is an observance in the United States that pays tribute to local, state, and federal law enforcement officers and takes place on May 15th. The holiday was created on October 1, 1961, when Congress asked the president to designate May 15th as a day to honor law enforcement officers.  John F. Kennedy signed the bill into law on October 1, 1962.  Much of the holiday centers around the National Law Enforcement Officers Memorial Wall in Washington, D.C., which features the names of the more than 17,000 law enforcement officers who have been killed in the line of duty.
-            </p>
-            <p>
-                In 1997, planning began for the Fresno County Peace Officers Memorial Foundation (FCPOMF) to honor those City, County, State, and Federal Peace Officers who gave their lives in the performance of their duties. Larry Bertao, who was instrumental in the conception and construction of the FCPOMF, held the position as the first President of the FCPOMF from 1998 to 2003.  James Olson became the FCPOMF President in 2003 and has held that honor to this day.
-            </p>
-            <p>
-                The Foundation was instrumental in the construction of the Fresno County Peace Officers Memorial, which broke ground on May 12, 1998, in the Fresno County Courthouse Park.  On May 2007, an addition to the Memorial was completed and includes space for 40 additional names on each side.
-            </p>
-            <p>
-                As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall, prominently displayed in the Fresno's County Courthouse Park.
-            </p>
-            <p>
-                This website is dedicated to those law enforcement officers who paid the ultimate price.
-            </p>
-            <p>Tax deductible donations can be made to the Fresno County Peace Officers Memorial Foundation via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G72VZ96SCA2ZN" target="_blank">PayPal</a> or P.O. Box 4290 Fresno, California 93744 </p>
-
-        </div>
-        <div class="col-sm-3 ">
-        <div class="objectiveContainer">
-            <h3>OUR OBJECTIVES & PURPOSES</h3>
-            <hr />
-            <p>
-                The Fresno County Peace Officers Memorial Foundation, Inc. is organized and its assets are to be used to continue recognizing and honoring fallen peace officers who have died in the line of duty while serving in Fresno County.
-            </p>
-            <p>
-                The assets of the Fresno County Peace Officers Memorial Foundation, Inc. will be utilized to construct, maintain, and enhance the Fresno County Peace Officers Memorial in Fresno County Courthouse Park and to administer the annual ceremony conducted during the National Police Week.
-                The Board of Directors may provide for additional assistance, as deemed appropriate, for the families of those officers who are honored.
-            </p>
+         </div>
+         <!--board of directors-->
+         <div class="col-sm-6 objectiveContainer">
+            <h3>
+               Board of Directors
+               <hr/>
+            </h3>
+            <div data-bind="foreach: $root.boardDirectors">
+               <div class="col-sm-12" style="padding-bottom:10px;">
+                  <div data-toggle="popover" title="Contact" data-content="" data-html="true" data-bind="attr:{'data-content': memberEmailHTML + '<br/>Click the envelope again to hide this box.'}" data-placement="top" class="emailLink"><i class="material-icons">email</i> </div>
+                  <p class="memberTitle" data-bind="text: memberName"></p>
+                  <!--this section is for the board of directors, NOT executive board members-->
+                  <p data-bind="html: memberPosition" style="display: inline"></p>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-<!--board-->
-<div id="section3" class="section ">
-    <h1>Fresno County Peace Officers Memorial Foundation Board</h2>
-<div class="flexParent">
-    <div class="col-sm-6 objectiveContainer">
-        <h3>Executive Board Members
-        <hr/>
-        </h3>
-        <div data-bind="foreach: $root.boardMembers">
-            <!--this section is only for the Executive Board Members-->
-            <div class="col-sm-12">
-                <div data-toggle="popover" title="Contact" data-content="" data-html="true" data-bind="attr:{'data-content': memberEmailHTML}" data-placement="top" class="emailLink"><i class="material-icons">email</i> </div>
-                <p class="memberTitle" data-bind="text: memberTitle"></p>
+         </div>
+      </div>
+      <p>Click the envelope next to a board member's name to send them an email. To hide the email pop-up, click the envelope again.</p>
+   </div>
+   <!--fallen-->
+   <div id="section4" class="section">
+      <h1>Fresno County's Fallen Officers</h1>
+      <div style="margin: 20px;">
+         <p>
+            The Fresno County Peace Officers Memorial Foundation, Inc. is organized and its assets are to be used to continue recognizing and honoring fallen peace officers who have died in the line of duty while serving in Fresno County.
+         </p>
+         <p>
+            This website is dedicated to those law enforcement officers who paid the ultimate price.
+         </p>
+         <p><strong>Scroll to the right to view more officers.</strong></p>
+         <div class="timeline"  data-bind="foreach: $root.officers()">
+            <div class="item" data-bind="attr:{id: officerNumber}">
+               <h2><span data-bind="text: officerName"></span> <br/> <span data-bind="text: date"></span></h2>
+               <div class="officerImg" data-bind="style: {backgroundImage: 'url(' + officerImg + ')'}"></div>
+               <div class="officerBio" data-bind="html: description"></div>
             </div>
-            <div class="col-sm-12">
-                <p data-bind="html: memberPosition"></p>
+         </div>
+         <div class="modal2">
+            <div class="modalInner ">
             </div>
-        </div>
-    </div>
-    <!--board of directors-->
-    <div class="col-sm-6 objectiveContainer">
-        <h3>Board of Directors
-        <hr/>
-        </h3>
-        <div data-bind="foreach: $root.boardDirectors">
-            <div class="col-sm-12" style="padding-bottom:10px;">
-                <div data-toggle="popover" title="Contact" data-content="" data-html="true" data-bind="attr:{'data-content': memberEmailHTML + '<br/>Click the envelope again to hide this box.'}" data-placement="top" class="emailLink"><i class="material-icons">email</i> </div>
-                <p class="memberTitle" data-bind="text: memberTitle"></p>
-                <!--this section is for the board of directors, NOT executive board members-->
-                <p data-bind="html: memberPosition" style="display: inline"></p>
-            </div>
-        </div>
-    </div>
-    </div>
-        <p>Click the envelope next to a board member's name to send them an email. To hide the email pop-up, click the envelope again.</p>
-</div>
-
-<!--fallen-->
-<div id="section4" class="section">
-    <h1>Fresno County's Fallen Officers</h1>
-<div style="margin: 20px;">
-    <p>
-        The Fresno County Peace Officers Memorial Foundation, Inc. is organized and its assets are to be used to continue recognizing and honoring fallen peace officers who have died in the line of duty while serving in Fresno County.
-    </p>
-    <p>
-        This website is dedicated to those law enforcement officers who paid the ultimate price.
-    </p>
-
-    <div class="timeline"  data-bind="foreach: $root.officers()">
-        <div class="item" data-bind="attr:{id: officerNumber}, click: function(data,event){$root.selectOfficer(data); $root.openPopUp(data,event); }">
-                <h4><span data-bind="text: officerName"></span> <br/> <span data-bind="text: date"></span></h4>
-                <div class="officerImg" data-bind="style: {backgroundImage: 'url(' + officerImg + ')'}"></div>
-            </div>
-    </div>
-    <div class="modal2">
-        <div class="modalInner ">
-        </div>
-    </div>
-    </div>
-</div>
-
-<!--gallery-->
-
-<div id="section5" class="section">
-    <div class="modal">
-        <div class="col-sm-6 modalTitle"></div>
-        <div class="col-sm-4">
+         </div>
+      </div>
+   </div>
+   <!--gallery-->
+   <div id="section5" class="section">
+      <div class="modal">
+         <div class="col-sm-6 modalTitle"></div>
+         <div class="col-sm-4">
             <span class="showPC">Choose a photo album:</span>
             <select class="albumDropdown showPC" data-bind="options: $root.albums(), optionsText: 'albumTitle', value: selectedAlbum, optionsCaption: 'Choose an album...'"></select>
-        </div>
-            <div class="modalClose">
-                <span>Back to gallery</span>
+         </div>
+         <div class="modalClose">
+            <span>Back to gallery</span>
+         </div>
+         <!--
+            <div class="galleryNav">
+                <i class="pull-left galleryLeft material-icons">chevron-left</i>
+                <i class="pull-right galleryRight material-icons">chevron-right</i>
             </div>
-        <!--
-        <div class="galleryNav">
-            <i class="pull-left galleryLeft material-icons">chevron-left</i>
-            <i class="pull-right galleryRight material-icons">chevron-right</i>
-        </div>
-        -->
-        <div class="modalInner"></div>
-    </div>
-    <h1>Photo Gallery</h2>
-    <h4>Click on an album below to view photos from that event.</h4>
-    <div id="galleryAlbums" class="flexParent" data-bind="foreach: $root.albums()">
-            <div class="galleryImgAlbum" data-bind="css: 'a'+ albumID, click: function(data,event){ $root.selectAlbum(data,event); $root.showModal(data,event)}">
-                <h4 data-bind="text: albumTitle"></h4>
+            -->
+         <div class="modalInner"></div>
+      </div>
+      <h1>
+      Photo Gallery</h2>
+      <h4>Click on an album below to view photos from that event.</h4>
+      <div id="galleryAlbums" class="flexParent" data-bind="foreach: $root.albums()">
+         <div class="galleryImgAlbum" data-bind="css: 'a'+ albumID, click: function(data,event){ $root.selectAlbum(data,event); $root.showModal(data,event)}">
+            <h4 data-bind="text: albumTitle"></h4>
+         </div>
+      </div>
+      <hr style="opacity: 0"/>
+      <hr style="opacity: 0"/>
+      <h1>The Fresno County Peace Officers Memorial in Courthouse Park <br/> <br/>
+         <span class="smol"> Click the image below to open a full-size version in a new tab or window. </span>
+      </h1>
+      <div id="memorialGallery" style="position: relative;"><a href="../static/images/memlg.jpg" target="_blank" ><img  id="memorialImg" src="../static/images/mem_only_sm.jpg" /></a></div>
+      <p>As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall.</p>
+   </div>
+   <!--events-->
+   <div id="section6" class="section">
+      <h1>Events</h1>
+      <div class="flexParent">
+         <div class="col-sm-6">
+            <h2>Upcoming Events</h2>
+            <div class="eventTable flexParent" data-bind="foreach: $root.events">
+               <div class="col-sm-12">
+                  <h4 data-bind="text: eventTitle"></h4>
+               </div>
+               <div class="col-sm-3 eventDate" data-bind="text: $root.parseDate(eventDate);"></div>
+               <div class="col-sm-3" data-bind="text: $root.parseTime(eventTimeStart);"></div>
+               <div class="col-sm-6" data-bind="text: eventLocation"></div>
+               <div class="col-sm-12" style="margin-top:20px;">
+                  <span class="addtocalendar atc-style-blue">
+                  <var class="atc_event">
+                  <var class="atc_date_start" data-bind="text: eventDate + ' ' + eventTimeStart">2017-05-04 12:00:00</var>
+                  <var class="atc_date_end" data-bind="text: eventDate + ' ' + eventTimeEnd">">2017-05-04 18:00:00</var>
+                  <var class="atc_timezone">America/Los_Angeles</var>
+                  <var class="atc_title" data-bind="text: eventTitle">Title</var>
+                  <var class="atc_description" data-bind="text: eventDescription">Description</var>
+                  <var class="atc_location" data-bind="text: eventLocation">Location</var>
+                  <var class="atc_organizer"></var>
+                  <var class="atc_organizer_email"></var>
+                  </var>
+                  </span>
+               </div>
+               <div class="borderTop col-sm-12">
+                  <hr style="border-color: #054663;"/>
+               </div>
             </div>
-    </div>
-    <hr style="opacity: 0"/>
-    <hr style="opacity: 0"/>
-    <h1>The Fresno County Peace Officers Memorial in Courthouse Park <br/> <br/>
-    <span class="smol"> Click the image below to open a full-size version in a new tab or window. </span>
-    </h1>
-    <div id="memorialGallery" style="position: relative;"><a href="../static/images/memlg.jpg" target="_blank" ><img  id="memorialImg" src="../static/images/mem_only_sm.jpg" /></a></div>
-    <p>As of February 2010, the tenth anniversary of the Fresno County Peace Officers Memorial, there are 56 peace officers honored at the Fresno County Peace Officers Memorial Wall.</p>
-   
-</div>
-
-<!--events-->
-<div id="section6" class="section">
-<h1>Events</h1>
-<div class="flexParent">
-    <div class="col-sm-6">
-    <h2>Upcoming Events</h2>
-        <div class="eventTable flexParent" data-bind="foreach: $root.events">
-            <div class="col-sm-12">
-                <h4 data-bind="text: eventTitle"></h4>
-            </div>
-                <div class="col-sm-3 eventDate" data-bind="text: eventDate"></div>
-                <div class="col-sm-3" data-bind="text: eventTime"></div>
-                <div class="col-sm-6" data-bind="text: eventLocation"></div>
-            <div class="col-sm-12" style="margin-top:20px">
-            <a class="w btn btnBlue calendarBtn" data-bind="attr: {href: eventLink},  visible: eventDate.length > 0" target="_blank" style="padding: 15px;">Add to Google Calendar <i class="material-icons">today</i></a>
-            </div>
-            <div class="borderTop col-sm-12">
-                <hr style="border-color: #054663;"/>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-    <h2>Past Events</h2>
-        <h4>Secretary Alicia Engellenner's Retirement</h4>
-        <p>ALICIA ENGELLENNER <br/>
-SECRETARY <br/>
-
-FRESNO COUNTY
-PEACE OFFICER’S
-MEMORIAL FOUNDATION <br/>
-
-<br/>
-October 2005 – August 2016
-<br/>
-<br/>
-
-In sincere appreciation for over ten years
-of dedicated service as a member of the Executive Board to the
-Fresno County Peace Officer’s Memorial Foundation. <br/>
-The perseverance and dedication that you displayed 
-was an inspiration to everyone. <br/>
-And thank you for the many hours of unwavering
-duty which involved a great deal of sacrifice
-to your family and personal life. <br/>
-
-<br/>
-  Your colleagues and friends wish you
-the best of luck in your future endeavors.
-</p>
+         </div>
+         <div class="col-sm-6">
+            <h2>Past Events</h2>
+            <h4>Secretary Alicia Engellenner's Retirement</h4>
+            <p>ALICIA ENGELLENNER <br/>
+               SECRETARY <br/>
+               FRESNO COUNTY
+               PEACE OFFICER’S
+               MEMORIAL FOUNDATION <br/>
+               <br/>
+               October 2005 – August 2016
+               <br/>
+               <br/>
+               In sincere appreciation for over ten years
+               of dedicated service as a member of the Executive Board to the
+               Fresno County Peace Officer’s Memorial Foundation. <br/>
+               The perseverance and dedication that you displayed 
+               was an inspiration to everyone. <br/>
+               And thank you for the many hours of unwavering
+               duty which involved a great deal of sacrifice
+               to your family and personal life. <br/>
+               <br/>
+               Your colleagues and friends wish you
+               the best of luck in your future endeavors.
+            </p>
             <div class="borderTop"></div>
-        <h4>2016 Peace Officers Memorial Week</h4>
-        <p>Click <a href="../static/images/Proclamation.pdf">here</a> to download the 2016 Peace Officers Memorial Week Proclamation.</p>
-        <object class="pdf" data="../static/images/Proclamation.pdf" type="application/pdf" width="300" height="200">
+            <h4>2016 Peace Officers Memorial Week</h4>
+            <p>Click <a href="../static/images/Proclamation.pdf">here</a> to download the 2016 Peace Officers Memorial Week Proclamation.</p>
+            <object class="pdf" data="../static/images/Proclamation.pdf" type="application/pdf" width="300" height="200">
             This file cannot be displayed in your browser. Click <a href="../static/images/Proclamation.pdf">here</a> to download it as a .PDF.
-        </object>
-    </div>
-</div>
-
-
-</div>
-
-<div class="loginModal">
-<div class="box flexParent">
-<div class="loginBox">
-    <div class="col-sm-12"><h1 style="color: #000; text-shadow: none">Log in</h1></div>
-    <div class="col-sm-12">
-    <div class="flexParent">
-        <div class="col-sm-6"><label for="email">Email</label></div>
-        <div class="col-sm-6"><input type="email" data-bind="value: $root.user"/></div>
-    </div>
-    </div>
-    <div class="col-sm-12">
-    <div class="flexParent">
-        <div class="col-sm-6"><label for="password">Password</label></div>
-        <div class="col-sm-6"><input type="password" data-bind="value: $root.pass"/></div>
-    </div>
-    </div>
-    <div class="submitBtn btn" data-bind="click: function(){$root.submit();}">Submit</div>
-    </div>
-    <div class="close">x</div>
-    <img class="check" src="../static/images/check-icon.png"/>
-</div>
-</div>
-
-
-<!--JS-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
-
-<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDXUt5whL27dkWjjfqLqX7BD0xgw1EJd8I",
-    authDomain: "fcpomf-16753.firebaseapp.com",
-    databaseURL: "https://fcpomf-16753.firebaseio.com",
-    storageBucket: "fcpomf-16753.appspot.com",
-    messagingSenderId: "60804743142"
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script src="../static/js/BoardViewModel.js"></script>
-
-<script src="../static/js/EventsViewModel.js"></script>
-
-<script src="../static/js/GalleryViewModel.js"></script>
-
-<script src="../static/js/officers.js"></script>
-
-<script src="../static/js/site.js"></script>
-
-
+            </object>
+         </div>
+      </div>
+   </div>
+   <div class="modal loginModal">
+      <div class="box ">
+         <div class="loginBox flexParent">
+            <div class="col-sm-12">
+               <h1 style="color: #000; text-shadow: none">Log in</h1>
+            </div>
+            <div class="col-sm-12">
+               <div class="flexParent">
+                  <div class="col-sm-6"><label for="email">Email</label></div>
+                  <div class="col-sm-6"><input type="email" data-bind="value: $root.user"/></div>
+               </div>
+            </div>
+            <div class="col-sm-12">
+               <div class="flexParent">
+                  <div class="col-sm-6"><label for="password">Password</label></div>
+                  <div class="col-sm-6"><input type="password" data-bind="value: $root.pass"/></div>
+               </div>
+            </div>
+            <div class="submitBtn btn" data-bind="click: function(){$root.submit();}">Submit</div>
+            <div class="submitBtn btn" data-bind="click: function(){$root.signUp();}">Sign Up</div>
+         </div>
+         <img class="check" src="../static/images/check-icon.png"/>
+         <div class="close">x</div>
+      </div>
+   </div>
+   <div class="modal editModal">
+      <div class="modalInner">
+         <textarea id="editor"></textarea>
+         <div class="btn saveBtn">Save</div>
+         <div class="close">x</div>
+      </div>
+   </div>
+   <!--JS-->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+   <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDXUt5whL27dkWjjfqLqX7BD0xgw1EJd8I",
+        authDomain: "fcpomf-16753.firebaseapp.com",
+        databaseURL: "https://fcpomf-16753.firebaseio.com",
+        storageBucket: "fcpomf-16753.appspot.com",
+        messagingSenderId: "60804743142"
+      };
+      firebase.initializeApp(config);
+   </script>
+   <script type="text/javascript">(function () {
+      if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+      if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+          var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+          s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+          var h = d[g]('body')[0];h.appendChild(s); }})();
+   </script>
+   <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+<!--Site scripts
+-->
+   <script src="../static/js/BoardViewModel.js"></script>
+   <script src="../static/js/EventsViewModel.js"></script>
+   <script src="../static/js/GalleryViewModel.js"></script>
+   <script src="../static/js/officers.js"></script>
+   <script src="../static/js/site.js"></script>
 </body>

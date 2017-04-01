@@ -1,5 +1,46 @@
-﻿// Write your Javascript code.
-var database = firebase.database();
+var user = firebase.auth().currentUser;
+var timelineVM = new OfficersViewModel;
+var editor, ref;
+
+//Custom binding handler
+// Redundant now that ckeditor is being used
+/*
+ko.bindingHandlers.editableText = {
+    init: function(element, valueAccessor) {
+        $(element).on('blur', function() {
+            var observable = valueAccessor();
+            observable($(this).text());
+        });
+    },
+    update: function(element, valueAccessor) {
+        var value = ko.utils.unwrapObservable(valueAccessor());
+        $(element).text(value);
+    }
+};
+
+*/
+
+Submit = function(username, pass) {
+    firebase.auth().signInWithEmailAndPassword(username, pass).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage);
+    });
+    $(".loginBox").addClass("animated flipOutX");
+    $(".check").addClass("animated flipInX");
+    $(".loginBox").hide();
+    $(".check").show();
+    user = firebase.auth().currentUser;
+    if (user) {
+        /*
+       
+        */
+        $(".editBanner").show();
+        $(".editBtn").css("display", "block");
+
+        //TESTING ONLY
+    }
+};
 
 LoginVM = function() {
     var self = this;
@@ -7,23 +48,41 @@ LoginVM = function() {
     self.pass = ko.observable("");
 
     self.submit = function() {
-        firebase.auth().signInWithEmailAndPassword(self.user(), self.pass()).catch(function(error) {
+        Submit(self.user(), self.pass());
+    }
+
+    self.signUp = function() {
+        firebase.auth().createUserWithEmailAndPassword(self.user(), self.pass()).catch(function(error) {
+            // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(errorMessage);
-
+            // ...
         });
-        $(".loginBox").addClass("animated flipOutX");
-        $(".check").addClass("animated flipInX");
-        $(".loginBox").hide();
-        $(".check").show();
     }
+
 
 };
 
+HomeVM = function() {
+    var self = this;
+    self.homeNotification = ko.observable("");
+    self.homeNotificationFromFB = firebase.database().ref("homeNotification"); //get reference to the homeNotification on firebase
+    self.homeNotificationFromFB.on('value', function(snapshot) {
+        self.homeNotification(snapshot.val());
+    });
+
+}
+
+AboutVM = function() {
+    self.aboutUs = ko.observable("");
+    self.aboutUsRef = firebase.database().ref("aboutUs"); //get reference to the homeNotification on firebase
+    self.aboutUsRef.on('value', function(snapshot) {
+        self.aboutUs(snapshot.val());
+    });
+
+}
+
 function initControls() {
-    /*initialize loupe (js magnifier)*/
-    //new Loupe(document.getElementById('memorialImg'));
     $(".navbar-header").on("click", function() {
         if ($(".navbar-collapse").hasClass("collapse")) {
             $(".navbar-collapse").removeClass("collapse");
@@ -107,8 +166,8 @@ function initControls() {
     });
 
     $(".emailLink").on("click", function() {
-        $(".popover").hide();
-        $(".popover").remove();
+        $(this).addClass("popover");
+
     });
 
     $(".goto6").on("click", function() {
@@ -116,11 +175,34 @@ function initControls() {
     });
 
     $(".close").on("click", function() {
-        $(".loginModal").hide();
+        $(".modal").hide();
+    });
+
+    $(".editBtn").on("click", function() {
+        var that = this;
+        var html;
+        // ref is a global variable holding the current reference to firebase we want for the editor.
+        // these if/else branches set ref according to which edit button was clicked to 
+        // trigger this event handler.
+        if ($(that).hasClass("editBtnHomeNotification")) {
+            ref = firebase.database().ref("homeNotification");
+            html = $("#homeNotificationH").html();
+        } else if ($(that).hasClass("editBtnAboutUs")) {
+            ref = firebase.database().ref("aboutUs");
+            html = $("#aboutUs").html();
+
+        }
+
+        $(".editModal").show();
+        editor = CKEDITOR.replace('editor');
+        editor.setData(html);
+
+    });
+
+    $(".saveBtn").on("click", function() {
+        var myHTML = editor.getData(); //get rich text editor data 
+        ref.set(myHTML); //send the rich text editor data to firebase (assuming the value of ref has not changed lol globals suck)
     })
-
-
-
 
 }
 
@@ -153,17 +235,26 @@ $(window).scroll(function() {
     }
 
 
+
+
 });
 
 $(document).ready(function() {
+
+    $(".modal").hide(); //go away you pesky modals
+    ko.applyBindings(timelineVM, $("#section4")[0]);
+
     var loginVM = new LoginVM;
     ko.applyBindings(loginVM, $(".loginModal")[0]);
 
+    var homeVM = new HomeVM;
+    ko.applyBindings(homeVM, $(".homeNotification")[0]);
+
+    var aboutVM = new AboutVM;
+    ko.applyBindings(aboutVM, $("#section2")[0]);
+
     var boardVM = new BoardViewModel;
     ko.applyBindings(boardVM, $("#section3")[0]);
-
-    var timelineVM = new OfficersViewModel;
-    ko.applyBindings(timelineVM, $("#section4")[0]);
 
     var galleryVM = new GalleryViewModel;
     ko.applyBindings(galleryVM, $("#section5")[0]);
