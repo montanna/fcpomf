@@ -1,34 +1,31 @@
 {
-  "name": "fcpomf",
-  "version": "1.0.0",
-  "description": "Fresno County Peace Officers Memorial Website",
-  "main": "app.js",
-  "engines": {
-    "node": "6.9.1"
-  },
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "bootstrap": "^3.3.7",
-    "ejs": "^2.4.1",
-    "express": "^4.15.2",
-    "firebase-admin": "^4.1.3",
-    "fs": "0.0.1-security",
-    "knockout": "^3.4.2",
-    "loupe": "*",
-    "path": "^0.12.7",
-    "serve-favicon": "^2.3.2"
-  },
-  "scripts": {
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/montanna/fcpomf.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/montanna/fcpomf/issues"
-  },
-  "homepage": "https://github.com/montanna/fcpomf"
+    "name": "fcpomf",
+    "version": "1.0.0",
+    "description": "Fresno County Peace Officers Memorial Website",
+    "main": "app.js",
+    "engines": {
+        "node": "6.9.1"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "ejs": "^2.4.1",
+        "express": "^4.15.2",
+        "firebase-admin": "^4.1.3",
+        "fs": "0.0.1-security",
+        "path": "^0.12.7",
+        "serve-favicon": "^2.3.2"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/montanna/fcpomf.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/montanna/fcpomf/issues"
+    },
+    "homepage": "https://github.com/montanna/fcpomf"
 }
