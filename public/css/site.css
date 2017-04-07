@@ -136,6 +136,20 @@ a:hover {
 
 .btnRed {
     background: #921c28;
+    color: #fff;
+    text-align: center;
+}
+
+input {
+    background-color: #fff!important;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+label {
+    width: 100px!important;
 }
 
 hr {
@@ -147,18 +161,17 @@ hr {
 }
 
 .popover {
-    //this is a somewhat misleading class name - refers to the thing clicked on to produce a tooltip
-    position: relative;
-}
-
-.popover::before {
     position: absolute;
-    left: 0;
-    top: 20
+    display: none;
+    height: 100px;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    top: -120px;
+    animation-duration: 0.3s;
 }
 
-.popover-title,
-.popover-content {
+.popover-title {
     color: #000;
     text-shadow: none;
 }
@@ -381,6 +394,7 @@ ul.nav {
     user-select: none;
     width: 20px;
     display: inline;
+    position: relative;
 }
 
 .emailLink:hover {
@@ -452,6 +466,7 @@ ul.nav {
 
 .modalInner {
     background: #fff;
+    color: #000;
     flex: 0 1 auto;
     width: 66vw;
     height: 66vh;
@@ -460,15 +475,23 @@ ul.nav {
     position: relative;
 }
 
+.modalInner > h1 {
+    color: #000;
+    text-shadow: none;
+}
+
 .loginModal > .box {
     height: 36vh;
     width: 36vw;
     border-radius: 10px;
-    display: flex;
     background: #fff;
     color: #111!important;
     text-align: center;
     position: relative;
+}
+
+.loginBox {
+    text-align: center;
 }
 
 .submitBtn {
@@ -476,15 +499,20 @@ ul.nav {
     color: #fff;
     width: 33%;
     margin: 0 auto;
-    margin-top: 13px;
+    margin-top: 5px;
 }
 
 .check {
     height: 100%;
+    margin: 0 auto;
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.box > form > label {
+.loginBox > label {
     width: 100px;
 }
 
@@ -746,7 +774,7 @@ ul.nav {
     border-radius: 7px;
     border: 3px solid #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    margin: 0 auto;
+    margin: 10px;
     display: none;
 }
 
@@ -760,10 +788,23 @@ ul.nav {
     margin: 0 auto;
 }
 
-.saveBtn {
-    margin: 0 auto;
+.cke_inner,
+.cke_contents {
+    height: 90%!important;
+    border: 1px solid #aaa;
+}
+
+.cke_editable {
+    font-size: 14px!important;
+}
+
+.btn {
+    margin: auto;
+    margin-top: 5px;
     background: #4CAF50;
+    color: #fff;
     border-radius: 7px;
+    width: 100px;
 }
 
 

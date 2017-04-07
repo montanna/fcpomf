@@ -13,6 +13,13 @@ EventsViewModel = function() {
         eventLink: ""
     }]);
 
+    self.selectedEvent = ko.observable(self.events([0]));
+
+    self.selectEvent = function(data, event) {
+        self.selectedEvent(data.data);
+    }
+
+
     self.ref = firebase.database().ref("eventList");
     self.events.pop();
     self.ref.on('value', function(snapshot) {
@@ -20,7 +27,7 @@ EventsViewModel = function() {
         snapshot.forEach(function(childSnapshot) {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
-            self.events.push(childData);
+            self.events.push({ data: childData, key: childKey });
         });
     });
 
@@ -45,15 +52,25 @@ EventsViewModel = function() {
         }
     }
 
-    /*
-        self.events = [,
-        ]
-        */
+    self.clickEdit = function(data, event) {
+        var target = event.currentTarget;
+        var eventData = data.data;
+        self.ref = firebase.database().ref("eventList/" + target.id);
+        $(".modal.editEventModal").show();
+        $(".modal.editEventModal").addClass("animated fadeIn");
+    }
 
-
-    /*
-        for (var i = 0; i < self.events.length; i++) {
-            eventsList.push(self.events[i]);
-        }
-        */
+    self.save = function() {
+        self.ref.set({
+            "eventTitle": self.selectedEvent().eventTitle,
+            "eventDescription": self.selectedEvent().eventDescription,
+            "eventDate": self.selectedEvent().eventDate,
+            "eventTimeStart": self.selectedEvent().eventTimeStart,
+            "eventTimeEnd": self.selectedEvent().eventTimeEnd,
+            "eventLocation": self.selectedEvent().eventLocation,
+            "eventLink": ""
+        });
+        $(".saveCheck").css("display", "block");
+        $(".saveCheck").addClass("animated flipInX");
+    }
 }

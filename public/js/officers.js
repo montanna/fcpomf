@@ -6,7 +6,7 @@
             snapshot.forEach(function(childSnapshot) {
                 var childKey = childSnapshot.key;
                 var childData = childSnapshot.val();
-                self.officers.push(childData);
+                self.officers.push({ data: childData, key: childKey });
             });
         });
 
